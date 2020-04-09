@@ -10,10 +10,18 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/View/echiquier.fxml"));
-        primaryStage.setTitle("Mon échiquier");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(Main.class.getResource("/View/echiquier.fxml"));
+
+            Scene scene = new Scene(fxmlLoader.load());
+
+            primaryStage.setTitle("Mon jeu d'échec");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
