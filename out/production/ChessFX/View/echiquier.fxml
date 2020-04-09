@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
@@ -8,21 +13,17 @@
 <?import javafx.scene.control.Label?>
 
 
-<GridPane alignment="center" hgap="10" prefHeight="600.0" prefWidth="600.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sample.ChessController">
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane prefHeight="75.0" prefWidth="75.0" GridPane.rowIndex="1" />
-      <Pane layoutX="263.0" layoutY="263.0" prefHeight="75.0" prefWidth="75.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Pane prefHeight="75.0" prefWidth="75.0" />
+      <HBox layoutX="14.0" layoutY="327.0" prefHeight="100.0" prefWidth="200.0">
+         <effect>
+            <ColorInput />
+         </effect>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" layoutX="38.0" layoutY="359.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
    </children>
-</GridPane>
+   <effect>
+      <ColorInput paint="BLACK" />
+   </effect>
+</Pane>
